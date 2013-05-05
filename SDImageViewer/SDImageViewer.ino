@@ -59,6 +59,7 @@ void WalkDirectory(File dir)
             LoadImage(entry);
         }
         entry.close();
+        // delay for a while between each image
         delay(2000);
     }
 }
