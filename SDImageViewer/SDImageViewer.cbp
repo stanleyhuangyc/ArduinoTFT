@@ -615,6 +615,7 @@
 		</Unit>
 		<Unit filename="UTFT.cpp" />
 		<Unit filename="UTFT.h" />
+		<Unit filename="memorysaver.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />

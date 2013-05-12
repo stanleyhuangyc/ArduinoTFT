@@ -82,109 +82,149 @@ UTFT::UTFT(byte model, int RS, int WR,int CS, int RST, int SER)
 {
 	switch (model)
 	{
+#ifndef DISABLE_HX8347A
 		case HX8347A:
 			disp_x_size=239;
 			disp_y_size=319;
 			display_transfer_mode=16;
 			break;
+#endif
+#ifndef DISABLE_ILI9327
 		case ILI9327:
 			disp_x_size=239;
 			disp_y_size=399;
 			display_transfer_mode=16;
 			break;
+#endif
+#ifndef DISABLE_SSD1289
 		case SSD1289:
 			disp_x_size=239;
 			disp_y_size=319;
 			display_transfer_mode=16;
 			break;
+#endif
+#ifndef DISABLE_ILI9325C
 		case ILI9325C:
 			disp_x_size=239;
 			disp_y_size=319;
 			display_transfer_mode=8;
 			break;
+#endif
+#ifndef DISABLE_ILI9325D
 		case ILI9325D_8:
 			disp_x_size=239;
 			disp_y_size=319;
 			display_transfer_mode=8;
 			break;
+#endif
+#ifndef DISABLE_ILI9325D
 		case ILI9325D_16:
 			disp_x_size=239;
 			disp_y_size=319;
 			display_transfer_mode=16;
 			break;
+#endif
+#ifndef DISABLE_HX8340B
 		case HX8340B_8:
 			disp_x_size=175;
 			disp_y_size=219;
 			display_transfer_mode=8;
 			break;
-		case HX8340B_S:
+#endif
+#ifndef DISABLE_HX8352A
+		case HX8352A:
 			disp_x_size=175;
 			disp_y_size=219;
 			display_transfer_mode=1;
 			display_serial_mode=SERIAL_4PIN;
 			break;
+#endif
+#ifndef DISABLE_HX8352A
 		case HX8352A:
 			disp_x_size=239;
 			disp_y_size=399;
 			display_transfer_mode=16;
 			break;
+#endif
+#ifndef DISABLE_
 		case ST7735:
 			disp_x_size=127;
 			disp_y_size=159;
 			display_transfer_mode=1;
 			display_serial_mode=SERIAL_5PIN;
 			break;
+#endif
+#ifndef DISABLE_PCF8833
 		case PCF8833:
 			disp_x_size=127;
 			disp_y_size=127;
 			display_transfer_mode=1;
 			display_serial_mode=SERIAL_5PIN;
 			break;
+#endif
+#ifndef DISABLE_S1D19122
 		case S1D19122:
 			disp_x_size=239;
 			disp_y_size=319;
 			display_transfer_mode=16;
 			break;
+#endif
+#ifndef DISABLE_SSD1963_480
 		case SSD1963_480:
 			disp_x_size=271;
 			disp_y_size=479;
 			display_transfer_mode=16;
 			break;
+#endif
+#ifndef DISABLE_SSD1963_800
 		case SSD1963_800:
 			disp_x_size=479;
 			disp_y_size=799;
 			display_transfer_mode=16;
 			break;
+#endif
+#ifndef DISABLE_S6D1121
 		case S6D1121_8:
 			disp_x_size=239;
 			disp_y_size=319;
 			display_transfer_mode=8;
 			break;
+#endif
+#ifndef DISABLE_S6D1121
 		case S6D1121_16:
 			disp_x_size=239;
 			disp_y_size=319;
 			display_transfer_mode=16;
 			break;
+#endif
+#ifndef DISABLE_SSD1289
 		case SSD1289LATCHED:
 			disp_x_size=239;
 			disp_y_size=319;
 			display_transfer_mode=LATCHED_16;
 			break;
+#endif
+#ifndef DISABLE_ILI9320
 		case ILI9320_8:
 			disp_x_size=239;
 			disp_y_size=319;
 			display_transfer_mode=8;
 			break;
+#endif
+#ifndef DISABLE_ILI9320
 		case ILI9320_16:
 			disp_x_size=239;
 			disp_y_size=319;
 			display_transfer_mode=16;
 			break;
+#endif
+#ifndef DISABLE_SSD1289_8
 		case SSD1289_8:
 			disp_x_size=239;
 			disp_y_size=319;
 			display_transfer_mode=8;
 			break;
+#endif
 	}
 	display_model=model;
 
