@@ -9,12 +9,15 @@
 
 // Declare which fonts we will be using
 extern uint8_t SmallFont[];
+extern uint8_t BigFont[];
 
 // for Arduino 2009/Uno
 UTFT myGLCD(ITDB28,19,18,17,16);   // Remember to change the model parameter to suit your display module!
 
-// Uncomment the next line for Arduino Mega
+// for Arduino Mega
 //UTFT myGLCD(ITDB32S,38,39,40,41);   // Remember to change the model parameter to suit your display module!
+
+#define SD_PIN 10
 
 File root;
 
@@ -71,8 +74,8 @@ void setup()
     myGLCD.setFont(SmallFont);
     myGLCD.fillScr(0, 0, 255);
 
-    pinMode(10, OUTPUT);
-    if (!SD.begin(10)) {
+    pinMode(SD_PIN, OUTPUT);
+    if (!SD.begin(SD_PIN)) {
         ShowMessage("SD not ready");
         return;
     }
